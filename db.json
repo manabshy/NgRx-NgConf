@@ -20,9 +20,15 @@
     },
     {
       "id": "3d604194-5dbc-48a2-b2dd-2949de4076af",
-      "name": "Book2",
+      "name": "Ok Book",
       "earnings": null,
       "description": null
+    },
+    {
+      "id": "5ac90b85-e2f7-4b74-9f39-a3ceda76270e",
+      "name": "My Example book - Part 1",
+      "earnings": "4000",
+      "description": "My sample"
     }
   ]
 }
