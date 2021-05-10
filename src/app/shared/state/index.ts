@@ -3,6 +3,7 @@ import { stat } from "fs";
 import { from } from "rxjs";
 import * as fromAuth from "./auth.reducer";
 import * as fromBooks from "./books.reducer";
+import { logoutMetareducer } from "./logout.metareducer";
 
 export interface State {
   auth: fromAuth.State,
@@ -14,7 +15,9 @@ export const reducers: ActionReducerMap<State> = {
   books: fromBooks.reducer
 };
 
-export const metaReducers: MetaReducer<State>[] = [];
+export const metaReducers: MetaReducer<State>[] = [
+  logoutMetareducer
+];
 
 
 /**

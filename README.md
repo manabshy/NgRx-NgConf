@@ -1,5 +1,5 @@
 # NgRx Workshop - ng-conf 2020
-
+# https://github.com/CodeSequence/ngrx-workshop-ngconf2020
 ## Setup
 To get started, ensure that you have *at least* Node v10 installed. You can verify what version you have installed by running 
 ```sh
@@ -35,3 +35,14 @@ yarn start
 The app should now be running at [http://localhost:4200](http://localhost:4200)
 
 
+# State flows down, changes flow up
+# Indirection between state and consumer
+# Select & Dispatch => Input and Output
+# Adhere to single responsibility principle
+
+# Reducers - Product new States. Receive the last state and next action. Use pure, immutable operations
+
+
+# Meta-Reducers - Intercept actions before they are reduced
+# Meta-Reducers - Intercept state before it is emitted
+# Meta-Reducers - Can change control flow if the store
