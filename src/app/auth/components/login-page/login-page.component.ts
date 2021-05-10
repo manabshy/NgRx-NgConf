@@ -4,6 +4,7 @@ import { Store } from "@ngrx/store";
 import { UserModel } from "src/app/shared/models";
 import { AuthUserActions } from "../../actions";
 import { LoginEvent } from "../login-form";
+import { selectAuthError, selectAuthUser, selectGettingAuthStatus, State } from "src/app/shared/state";
 
 @Component({
   selector: "app-login-page",
@@ -17,8 +18,15 @@ export class LoginPageComponent {
     username: "NgRx Learner"
   });
   error$: Observable<string | null> = of(null);
-
+  constructor(private store: Store<State>) {
+    this.gettingStatus$ = store.select(selectGettingAuthStatus);
+    this.user$ = store.select(selectAuthUser);
+    this.error$ = store.select(selectAuthError);
+  }
   onLogin($event: LoginEvent) {
+    this.store.dispatch(
+      AuthUserActions.login($event.username, $event.password)
+    );
     // Not Implemented
   }
 }
